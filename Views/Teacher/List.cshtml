@@ -1,0 +1,22 @@
+﻿@model IEnumerable<CumulativeProject.Models.Teacher>
+@{
+    ViewBag.Title = "List";
+}
+
+<h2>List of all Teachers</h2>
+<form action="/Teacher/List" method="GET">
+    <input type="text" name="SearchKey" autocomplete="off" />
+    <input type="submit" value="Search" />
+</form>
+
+<a href="/Teacher/Add">Add Teachers</a>
+
+@foreach (var Teacher in Model)
+    //(CumulativeProject.Models.Teacher Teacher in Model)
+  {
+
+    //dynamically computing a web URL or the path to which we want the user to go (links from list to show)
+   
+        <h3><a href="/teacher/Show/@Teacher.TeacherId">@Teacher.TeacherFname @Teacher.TeacherLname</a></h3>
+    
+}

@@ -1,0 +1,108 @@
+﻿
+@{
+    ViewBag.Title = "Add";
+}
+
+<h2>Add new Teacher</h2>
+
+<a href="/Teacher/List">Back to List</a>
+
+<form action="/Teacher/Create" method="POST" name="addTeacherform">
+    <br />
+    <div>
+        <label>Teacher First Name:</label>
+        <input type="text" name="TeacherFName" />
+    </div>
+    <br />
+    <div>
+        <label>Teacher Last Name:</label>
+        <input type="text" name="TeacherLName" />
+    </div>
+    <br />
+    <div>
+        <label>Employee Number:</label>
+        <input type="text" name="EmployeeNumber" />
+    </div>
+    <br />
+    <div>
+        <label>Hire Date:</label>
+        <input type="text" name="HireDate" />
+    </div>
+    <br />
+    <div>
+        <label>Salary:</label>
+        <input type="text" name="Salary" />
+
+    </div>
+    <br />
+    <!--<div>
+             <label>Teacher Last Name:</label>
+            <textarea name="TeacherLName"></textarea>
+        </div> -->
+    <div>
+        <input type="submit" value="Add Teacher" />
+    </div>
+</form>
+
+<!--Javascript: if-else statement for user not to submit missing information-->
+<!-- Create function -->
+<!-- window.onload = submitNow; -->
+<!-- function submitNow(){
+    var formSubmit = document.forms.addTeacherform;
+
+    formSubmit.onSubmit = checkForm;
+
+    function checkForm(){
+        var inputFname = formHandel.TeacherFName;
+        var inputLname = formHandel.TeacherLName;
+        var inputEmployeeNum = formHandel.EmployeeNumber;
+        var inputSalary = formHandel.Salary;
+        var inputHdate = formHandel.HireDate;
+
+        <!--validation if statement
+        if(inputFname.value==="")
+            {
+                inputFname.style.background="red";
+                inputFname.focus();
+                return false;
+            } else {
+                inputFName.style.background="white";
+            }
+        if(inputLname.value==="")
+            {
+                inputLname.style.background="red";
+                inputLname.focus();
+                return false;
+            } else {
+                inputLname.style.background="white";
+            }
+
+        /// regex expression for employee Number. Must start with t or T. then 3 numbers after
+         var employeeRegEx = /^([t|T]\[0-9]\d{3}$)/;
+        if(!employeeRegEx.test(inputEmployeeNum.value))
+            {
+                inputEmployeeNum.style.background="red";
+                inputEmployeeNum.focus();
+                return false;
+            } else {
+                inputEmployeeNum.style.background="white";
+            }
+        if(inputSalary.value==="")
+            {
+                inputSalary.style.background="red";
+                inputSalary.focus();
+                return false;
+            } else {
+                inputSalary.style.background="white";
+            }
+        if(inputHdate.value==="")
+            {
+                inputHdate.style.background="red";
+                inputHdate.focus();
+                return false;
+            } else {
+                inputHdate.style.background="white";
+            }
+        }
+    }
+    -->
